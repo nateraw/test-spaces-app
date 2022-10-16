@@ -1,0 +1,15 @@
+name: Build documentation
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+   build:
+    uses: nateraw/spaces-action/.github/workflows/sync_with_hf_hub.yml@main
+    with:
+      github_repo_id: nateraw/test-spaces-app
+      spaces_repo_id: nateraw/test-spaces-app-from-github
+    secrets:
+      hf_token: ${{ secrets.HF_TOKEN }}
