@@ -7,7 +7,7 @@ on:
 
 jobs:
    build:
-    uses: nateraw/spaces-action/.github/workflows/sync_with_hf_hub.yml@main
+    uses: nateraw/huggingface-sync-action/.github/workflows/sync_with_hf_hub.yml@main
     with:
       github_repo_id: nateraw/test-spaces-app
       huggingface_repo_id: nateraw/test-spaces-app-from-github
