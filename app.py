@@ -1,7 +1,7 @@
 import gradio as gr
 
 def greet(name):
-    return "Hello " + name + "!"
+    return "Hello " + name + "!!"
 
 interface = gr.Interface(greet, 'text', 'text')
 
