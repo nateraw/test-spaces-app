@@ -6,12 +6,14 @@ on:
       - main
 
 jobs:
-   build:
-    uses: nateraw/huggingface-sync-action/.github/workflows/sync_with_hf_hub.yml@main
-    with:
-      github_repo_id: nateraw/test-spaces-app
-      huggingface_repo_id: nateraw/test-spaces-app-from-github
-      repo_type: space
-      space_sdk: gradio
-    secrets:
-      hf_token: ${{ secrets.HF_TOKEN }}
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Sync with Hugging Face
+      uses: nateraw/huggingface-sync-action@v0.0.3
+      with:
+        github_repo_id: nateraw/test-spaces-app
+        huggingface_repo_id: nateraw/test-spaces-app-from-github
+        repo_type: space
+        space_sdk: gradio
+        hf_token: ${{ secrets.HF_TOKEN }}
