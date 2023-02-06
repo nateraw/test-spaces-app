@@ -10,7 +10,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: Sync with Hugging Face
-      uses: nateraw/huggingface-sync-action@v0.0.3
+      uses: nateraw/huggingface-sync-action@v0.0.4
       with:
         github_repo_id: nateraw/test-spaces-app
         huggingface_repo_id: nateraw/test-spaces-app-from-github
